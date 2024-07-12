@@ -15,6 +15,20 @@ public class ProductDetailsPageObject extends BaseClass {
 	@FindBy(xpath = "//button[text()='Back to products']")
 	private WebElement titleProductDetailsPage;
 
+	@FindBy(xpath = "//button[@id=\"react-burger-menu-btn\"]")
+	private WebElement ellipsisBtn;
+
+	@FindBy(id = "logout_sidebar_link")
+	private WebElement logOutBtn;
+
+	public WebElement getEllipsisBtn() {
+		return ellipsisBtn;
+	}
+
+	public WebElement getLogOutBtn() {
+		return logOutBtn;
+	}
+
 	public WebElement getTitleProductDetailsPage() {
 		return titleProductDetailsPage;
 	}
@@ -23,6 +37,17 @@ public class ProductDetailsPageObject extends BaseClass {
 
 		String gettingTitleOfProductDetailsPage = gettingText(getTitleProductDetailsPage());
 		return gettingTitleOfProductDetailsPage;
+	}
+
+	public void clickingEllipsis() {
+
+		elementClick(getEllipsisBtn());
+
+	}
+
+	public void clickingLogoutBtn() {
+
+		elementClick(getLogOutBtn());
 	}
 
 }

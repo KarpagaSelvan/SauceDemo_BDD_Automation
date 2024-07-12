@@ -12,10 +12,12 @@ import io.cucumber.java.Scenario;
 
 public class HooksClass extends BaseClass {
 
+	public static String browserType;
+
 	@Before
 	public void beforeScenario() {
 
-		browserLaunch("chrome");
+		browserLaunch(browserType = "chrome");
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().window().maximize();
 

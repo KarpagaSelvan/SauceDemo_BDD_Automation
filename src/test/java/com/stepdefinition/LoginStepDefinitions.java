@@ -15,9 +15,7 @@ public class LoginStepDefinitions extends BaseClass {
 
 	PageObjectManager manager = new PageObjectManager();
 
-	@Given("User is on SwagLabs home page")
-	public void user_is_on_swag_labs_home_page() {
-	}
+	
 
 	@When("User perfroms login using the {string} and {string}")
 	public void user_perfroms_login_using_the_and(String userName, String password) {

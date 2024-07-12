@@ -7,6 +7,8 @@ Feature: Verifying the product page functionalities of SwagLabs web application
     Then User verify the success message "Products"
     And User clicks on the products from the products page list
     Then User verify the product details page success message "Back to products"
+    And User perfrom logout
+    Then User verify the login page success message "Swag Labs"
 
     Examples: 
       | username      | password     |
