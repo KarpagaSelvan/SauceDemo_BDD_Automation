@@ -27,6 +27,13 @@ public class LoginPageObject extends BaseClass {
 	@FindBy(xpath = "//h3[text()='Epic sadface: Username is required']")
 	private WebElement emptyCredErrorMsg;
 
+	@FindBy(xpath = "//div[text()='Swag Labs']")
+	private WebElement loginPageTitle;
+
+	public WebElement getLoginPageTitle() {
+		return loginPageTitle;
+	}
+
 	public WebElement getInvalidCredErrorMsg() {
 		return invalidCredErrorMsg;
 	}
@@ -64,6 +71,13 @@ public class LoginPageObject extends BaseClass {
 	public String gettingEmptyCredErrorMsg() {
 		String emptyCredsErrorMsg = gettingText(getEmptyCredErrorMsg());
 		return emptyCredsErrorMsg;
+
+	}
+
+	public String gettingLoginPageSuccessMsg() {
+
+		String loginPageSuccessMsg = gettingText(getLoginPageTitle());
+		return loginPageSuccessMsg;
 
 	}
 

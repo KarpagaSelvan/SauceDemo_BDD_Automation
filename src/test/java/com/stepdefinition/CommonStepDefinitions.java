@@ -1,5 +1,7 @@
 package com.stepdefinition;
 
+import org.junit.Assert;
+
 import com.pageobjectmanager.PageObjectManager;
 
 import io.cucumber.java.en.Given;
@@ -17,6 +19,13 @@ public class CommonStepDefinitions {
 	public void user_perfrom_logout() {
 		manager.getProductDetailsPageObject().clickingEllipsis();
 		manager.getProductDetailsPageObject().clickingLogoutBtn();
+
+	}
+
+	@Then("User verify the login page success message {string}")
+	public void user_verify_the_login_page_success_message(String loginPageSuccessMsg) {
+
+		Assert.assertEquals(manager.getLoginPageObject().gettingLoginPageSuccessMsg(), loginPageSuccessMsg);
 
 	}
 

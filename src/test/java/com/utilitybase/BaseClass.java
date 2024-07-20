@@ -1,5 +1,7 @@
 package com.utilitybase;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -53,6 +55,10 @@ public class BaseClass {
 		String text = element.getText();
 		return text;
 
+	}
+
+	public void waitImplicitly() {
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 
 }

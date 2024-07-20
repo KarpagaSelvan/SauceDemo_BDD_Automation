@@ -20,6 +20,7 @@ public class HooksClass extends BaseClass {
 		browserLaunch(browserType = "chrome");
 		driver.get("https://www.saucedemo.com/");
 		driver.manage().window().maximize();
+		waitImplicitly();
 
 	}
 
@@ -30,6 +31,8 @@ public class HooksClass extends BaseClass {
 		byte[] screenshotAs = screenshot.getScreenshotAs(OutputType.BYTES);
 
 		scenario.attach(screenshotAs, "SwagLabs.png", "Screenshot after the completion of every scenario");
+
+		driver.quit();
 
 	}
 
