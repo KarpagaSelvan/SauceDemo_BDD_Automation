@@ -9,15 +9,15 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(dryRun = false, stepNotifications = true, glue = "com.stepdefinition", features = "src\\test\\resources\\Features", tags = "", monochrome = true, plugin = {
-		"pretty", "json:\\target\\SauceDemo.json" })
+@CucumberOptions(dryRun = false, stepNotifications = true, glue = "com.stepdefinition", features = "src/test/resources/Features", tags = "", monochrome = true, plugin = {
+		"pretty", "json:/target/SauceDemo.json" })
 
 public class TestRunner {
 
 	@AfterClass
 	public static void afterClass() {
 
-		TestReport.generateJvmReport("\\target\\SauceDemo.json");
+		TestReport.generateJvmReport("/target/SauceDemo.json");
 	}
 
 }
