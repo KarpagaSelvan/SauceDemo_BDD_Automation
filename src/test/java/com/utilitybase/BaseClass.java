@@ -11,6 +11,8 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseClass {
 
 	public static WebDriver driver;
@@ -20,6 +22,7 @@ public class BaseClass {
 
 		switch (browserType.toLowerCase()) {
 		case "chrome":
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--headless"); // Example argument for headless mode
 			chromeOptions.addArguments("--no-sandbox");
@@ -28,6 +31,7 @@ public class BaseClass {
 			break;
 
 		case "firefox":
+			WebDriverManager.firefoxdriver().setup();
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			firefoxOptions.addArguments("--headless"); // Example arguments
 			firefoxOptions.addArguments("--disable-gpu");
@@ -35,6 +39,7 @@ public class BaseClass {
 			break;
 
 		case "edge":
+			WebDriverManager.edgedriver().setup();
 			EdgeOptions edgeOptions = new EdgeOptions();
 			edgeOptions.addArguments("--headless"); // Example arguments
 			driver = new EdgeDriver();

@@ -13,7 +13,11 @@ public class TestReport extends BaseClass {
 
 	public static void generateJvmReport(String jsonFile) {
 
-		File file = new File(System.getProperty("user.dir") + "target");
+		File file = new File(System.getProperty("user.dir") + File.separator + "target");
+
+		if (!file.exists()) {
+			file.mkdirs(); // Create directory if it does not exist
+		}
 
 		Configuration configuration = new Configuration(file, "SauceDemo - Automation Execution Report");
 
