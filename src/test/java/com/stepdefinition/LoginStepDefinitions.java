@@ -1,13 +1,10 @@
 package com.stepdefinition;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
 
 import com.pageobjectmanager.PageObjectManager;
 import com.utilitybase.BaseClass;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
