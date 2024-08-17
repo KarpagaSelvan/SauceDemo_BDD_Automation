@@ -13,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class BaseClass {
 
-	public WebDriver driver;
+	public static WebDriver driver;
 	public static WebElement element;
 
 	public void browserLaunch(String browserType) {
