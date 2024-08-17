@@ -27,10 +27,10 @@ public class HooksClass extends BaseClass {
 	@After
 	public void afterScenario(Scenario scenario) {
 
-		TakesScreenshot screenshot = (TakesScreenshot) driver;
-		byte[] screenshotAs = screenshot.getScreenshotAs(OutputType.BYTES);
-
-		scenario.attach(screenshotAs, "SwagLabs.png", "Screenshot after the completion of every scenario");
+//		TakesScreenshot screenshot = (TakesScreenshot) driver;
+//		byte[] screenshotAs = screenshot.getScreenshotAs(OutputType.BYTES);
+//
+//		scenario.attach(screenshotAs, "SwagLabs.png", "Screenshot after the completion of every scenario");
 
 		driver.quit();
 
