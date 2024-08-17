@@ -25,7 +25,7 @@ public class HooksClass extends BaseClass {
 	}
 
 	@After
-	public void afterScenario(Scenario scenario) {
+	public  void afterScenario(Scenario scenario) {
 
 		TakesScreenshot screenshot = (TakesScreenshot) driver;
 		byte[] screenshotAs = screenshot.getScreenshotAs(OutputType.BYTES);
