@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(dryRun = false, stepNotifications = true, glue = "com.stepdefinition", features = "src/test/resources/Features", tags = "", monochrome = true, plugin = {
-		"pretty", "json:/target/SauceDemo.json" })
+		"pretty", "json:target/SauceDemo.json" })
 
 public class TestRunner {
 
