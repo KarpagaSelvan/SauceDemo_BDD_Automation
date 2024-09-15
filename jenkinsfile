@@ -4,16 +4,19 @@ pipeline{
 		stage('build'){
 			steps{
 				echo "Build Process Successfully Completed!"
+				bat "mvn clean"
 				}
 			}
 		stage('deploy'){
 			steps{
 				echo "Deploy Process Successfully Completed!"
+				bat "mvn test"
 				}
 			}	
 		stage('test'){
 			steps{
 				echo "test Process Successfully Completed!"
+				bat "mvn compile"
 				}
 			}		
 		stage('release'){
